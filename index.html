@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق الابل الالكتروني</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>سوق الابل الالكتروني</h1>
+        <p>مرحبا بكم في متجرنا</p>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#products">المنتجات</a>
+            <a href="#cart">السلة</a>
+            <a href="#about">من نحن</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>منتجاتنا</h2>
+        <div class="products">
+            <div class="product">
+                <img src="images/hamraa.jpg" alt="الحمراء">
+                <h3>الحمراء</h3>
+                <p>السعر: 100 ريال سعودي</p>
+                <button onclick="addToCart('الحمراء', 100)">إضافة الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="images/wadhha.jpg" alt="الوضحى">
+                <h3>الوضحى</h3>
+                <p>السعر: 120 ريال سعودي</p>
+                <button onclick="addToCart('الوضحى', 120)">إضافة الى السلة</button>
+            </div>
+            <div class="product">
+                <img src="images/majham.jpg" alt="المجهم">
+                <h3>المجهم</h3>
+                <p>السعر: 150 ريال سعودي</p>
+                <button onclick="addToCart('المجهم', 150)">إضافة الى السلة</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>السلة</h2>
+        <ul id="cart-items"></ul>
+        <p>الإجمالي: <span id="cart-total">0</span> ريال سعودي</p>
+        <div id="payment-options">
+            <h3>اختر طريقة الدفع</h3>
+            <label><input type="radio" name="payment-method" value="mada" checked> مدى</label>
+            <label><input type="radio" name="payment-method" value="visa"> فيزا</label>
+            <label><input type="radio" name="payment-method" value="cod"> الدفع عند الاستلام</label>
+        </div>
+        <button id="checkout-button" onclick="loadCheckout()">اتمام الطلب</button>
+    </section>
+
+    <!-- Dynamic Content Section -->
+    <div id="dynamic-content" style="display: none;"></div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>  سعود فلاح الرشيدي</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 سوق الابل الالكتروني</p>
+    </footer>
+</body>
+</html>
